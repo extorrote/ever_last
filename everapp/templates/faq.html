@@ -1,0 +1,122 @@
+
+
+
+{%load static%}
+
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/faq.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+<nav class="main-menu">
+            
+    {% if user.username %}
+    <ul>       
+        <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+        <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+        <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+        <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+        <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+        
+        <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                   
+        <li><a href="{% url 'logout'%}" >Logged in as  {{ user.username }} : Logout</a></li>
+    </ul>
+    
+
+
+
+    {% else%}
+    <ul>       
+        <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+        <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+        <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+        <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'login'%}"  tarjet=blank>login</a></li>            
+        <li><a href="{% url 'registro'%}"  tarjet=blank>Sign Up</a></li>                   
+        <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+        <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+        <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                    
+    </ul>
+
+{% endif%}
+
+</nav>  
+{%block content%}
+
+<section id="faq">
+    <div class="faq-container">
+        
+        <h2>Frequently Asked Questions</h2>
+        
+        <div class="faq-item">
+            <h3>Buying a Property</h3>
+            <p><strong>Q: What is the process for buying a property in Puerto Vallarta?</strong></p>
+            <p>A: The process involves several steps: finding a property, making an offer, getting a purchase agreement, securing financing (if needed), conducting inspections, and closing the deal. Working with a knowledgeable real estate agent like Ever can simplify this process for you.</p>
+
+            <p><strong>Q: Can foreigners buy property in Puerto Vallarta?</strong></p>
+            <p>A: Yes, foreigners can buy property in Mexico, including Puerto Vallarta. There are specific areas called restricted zones where foreign buyers must use a bank trust (fideicomiso) to purchase property, but this is a common and straightforward process.</p>
+
+            <p><strong>Q: What costs are associated with buying a property?</strong></p>
+            <p>A: In addition to the purchase price, buyers should budget for closing costs, which include notary fees, registration fees, and property taxes. These can typically range from 5% to 7% of the purchase price.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Selling a Property</h3>
+            <p><strong>Q: How do I determine the value of my property?</strong></p>
+            <p>A: The value of your property can be determined through a comparative market analysis (CMA) conducted by a real estate agent. This analysis looks at similar properties that have recently sold in your area.</p>
+
+            <p><strong>Q: How long does it typically take to sell a property in Puerto Vallarta?</strong></p>
+            <p>A: The time it takes to sell a property can vary based on market conditions, pricing, and the property’s condition. On average, it can take anywhere from a few months to over a year.</p>
+
+            <p><strong>Q: What should I do to prepare my property for sale?</strong></p>
+            <p>A: To prepare your property for sale, consider making any necessary repairs, decluttering, and staging the home to make it more appealing to buyers. A real estate agent can provide specific recommendations based on your property.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Renting a Property</h3>
+            <p><strong>Q: Can I rent out my property in Puerto Vallarta?</strong></p>
+            <p>A: Yes, many property owners in Puerto Vallarta rent out their homes either on a short-term or long-term basis. It's important to understand local regulations and potential tax implications.</p>
+
+            <p><strong>Q: What are the advantages of hiring a property management company?</strong></p>
+            <p>A: A property management company can handle tenant screening, rent collection, maintenance, and other day-to-day tasks, making it easier for you to manage your rental property, especially if you live outside the area.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>General Questions</h3>
+            <p><strong>Q: Why should I choose Ever as my real estate agent?</strong></p>
+            <p>A: Ever offers local expertise, personalized service, a proven track record, and a commitment to integrity and trust. With years of experience and deep knowledge of the Puerto Vallarta market, Ever is dedicated to helping clients achieve their real estate goals.</p>
+
+            <p><strong>Q: How can I contact Ever’s Real Estate Services?</strong></p>
+            <p>A: You can contact Ever’s Real Estate Services by phone at +52 322 779 5950 or by email at everpv@gmail.com. Additionally, you can fill out the contact form on our website.</p>
+        </div>
+    </div>
+</section>
+{%endblock%}

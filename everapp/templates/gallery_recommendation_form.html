@@ -1,0 +1,99 @@
+
+
+{%load static%}
+<meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/gallery_recommendation_form.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+<div class="form_wrapper">
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-group">
+        {{ form.gallery_name.label_tag }}
+        {{ form.gallery_name }}
+    </div>
+
+    <div class="form-group">
+        {{ form.kind_of_art.label_tag }}
+        {{ form.kind_of_art }}
+    </div>
+    
+    
+    <div class="form-group">
+        {{ form.range_of_price.label_tag }}
+        {{ form.range_of_price }}
+    </div>
+    <div class="form-group">
+        {{ form.title_h1.label_tag }}
+        {{ form.title_h1}}
+    </div>
+    <div class="form-group">
+        {{ form.description.label_tag }}
+        {{ form.description }}
+    </div>
+    <div class="form-group">
+        {{ form.address.label_tag }}
+        {{ form.address}}
+    </div>
+
+    <div class="form-group">
+        {{ form.phone_number.label_tag }}
+        {{ form.phone_number }}
+    </div>
+
+    <div class="form-group">
+        {{ form.days_open.label_tag }}
+        {{ form.days_open }}
+    </div>
+
+    <div class="form-group">
+        {{ form.days_closed.label_tag }}
+        {{ form.days_closed }}
+    </div>
+
+    <div class="form-group">
+        {{ form.imagen1.label_tag }}
+        {{ form.imagen1 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen2.label_tag }}
+        {{ form.imagen2 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen3.label_tag }}
+        {{ form.imagen3 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen4.label_tag }}
+        {{ form.imagen4 }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</div>

@@ -1,0 +1,131 @@
+
+    /* Center the content and limit width */
+    *{
+      box-sizing: border-box;
+    
+      margin: 0;
+      padding: 0;
+     
+    }
+   
+    body{
+      background-color:#a7e6ff47;
+     
+      
+    }
+
+   
+
+    .ver-property_title, .property-item,form,.property-h4{
+      display:none;
+    }
+    .centrar{
+      max-width:400px;
+      margin:auto;
+      border-radius: 10px;
+      
+      
+      
+    }
+    .content-wrapper ,h1{
+        max-width: 450px;
+        margin: 0 auto;     
+        text-align: center;
+        color:#48e
+        
+        
+    }
+
+    /* Style for the recommendations container */
+    .recommendation-container {
+      
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        text-align: center; /* Ensure content inside is left-aligned */
+        
+    }
+
+    /* Style for the recommendation image */
+    .recommendation-image {
+        max-width: 20%;
+        height: auto;
+        border-radius: 50%;
+        margin:auto;
+
+    }
+
+    /* Style for the recommendation title */
+    .recommendation-title {
+        margin-top: 10px;
+        font-size: 1.5em;
+       
+        color: #333;
+    }
+   
+.material-symbols-outlined {
+  color:#48e;
+}
+
+
+    /* Style for the recommendation email */
+    .recommendation-email {
+        font-style: italic;
+        color: #666;
+    }
+
+    /* Style for the recommendation text */
+    .recommendation-text {
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    /* Style for the "No recommendations yet" message */
+    .no-recommendations {
+        color: #999;
+        font-style: italic;
+    }
+
+
+  .add-recommendation-link{
+    
+    width:200px;
+    height:30px;
+    
+    margin:auto;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border:4px solid white;
+    
+  }
+ 
+.add-recommendation-link a{
+  color:#48e;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 26px;
+  margin-bottom: -5px;
+  
+}
+
+    
+.add-recommendation-link a:hover{
+  background-color: #48e;
+  color:white;
+  border-radius: 5px;
+}
+
+
+
+
+
+    footer{
+      display: none;
+    }
+
+
+
+

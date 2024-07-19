@@ -1,0 +1,230 @@
+
+{%load static%}
+
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/styles_add_property.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+<form method="post" enctype="multipart/form-data">
+    <h2>add a New Property </h2>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    
+    </div>
+    <div class="form-group">
+        {{ form.price.label_tag }}
+        {{ form.price }}
+    </div>
+    <div class="form-group">
+        {{ form.property_size.label_tag }}
+        {{ form.property_size }}
+    </div>
+    <div class="form-group">
+        {{ form.bedrooms.label_tag }}
+        {{ form.bedrooms }}
+    </div>
+    <div class="form-group">
+        {{ form.bathrooms.label_tag }}
+        {{ form.bathrooms }}
+    </div>
+    <div class="form-group">
+        {{ form.property_type.label_tag }}
+        {{ form.property_type }}
+    </div>
+    <div class="form-group">
+        {{ form.property_status.label_tag }}
+        {{ form.property_status }}
+    </div>
+    <div class="form-group">
+        {{ form.agent_name.label_tag }}
+        {{ form.agent_name }}
+    </div>
+    <div class="form-group">
+        {{ form.status.label_tag }}
+        {{ form.status }}
+    </div>
+    <div class="form-group">
+        {{ form.location.label_tag }}
+        {{ form.location }}
+    </div>
+
+    <div class="form-group">
+        {{ form.pre_construction.label_tag }}
+        {{ form.pre_construction }}
+    </div>
+
+    <div class="form-group">
+        {{ form.development_name.label_tag }}
+        {{ form.development_name }}
+    </div>
+
+    <div class="form-group">
+        {{ form.pet_friendly.label_tag }}
+        {{ form.pet_friendly }}
+    </div>
+    <div class="form-group">
+        {{ form.primary_view.label_tag }}
+        {{ form.primary_view }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen1.label_tag }}
+        {{ form.imagen1 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen2.label_tag }}
+        {{ form.imagen2 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen3.label_tag }}
+        {{ form.imagen3 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen4.label_tag }}
+        {{ form.imagen4 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen5.label_tag }}
+        {{ form.imagen5 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen6.label_tag }}
+        {{ form.imagen6 }}
+    </div>
+    <div class="form-group">
+        {{ form.imagen7.label_tag }}
+        {{ form.imagen7 }}
+    </div>
+
+    <div class="form-group">
+        {{ form.imagen8.label_tag }}
+        {{ form.imagen8 }}
+    </div>
+
+    <div class="form-group">
+        {{ form.video.label_tag }}
+        {{ form.video }}
+    </div>
+    <div class="form-group">
+        {{ form.water.label_tag }}
+        {{ form.water }}
+    </div>
+
+    <div class="form-group">
+        {{ form.stories.label_tag }}
+        {{ form.stories }}
+    </div>
+
+    <div class="form-group">
+        {{ form.furnished.label_tag }}
+        {{ form.furnished }}
+    </div>
+
+    <div class="form-group">
+        {{ form.comunity.label_tag }}
+        {{ form.comunity }}
+    </div>
+
+    <div class="form-group">
+        {{ form.swer.label_tag }}
+        {{ form.swer }}
+    </div>
+
+    <div class="form-group">
+        {{ walls.stories.label_tag }}
+        {{ walls.stories }}
+    </div>
+
+    <div class="form-group">
+        {{ form.road_type.label_tag }}
+        {{ form.road_type }}
+    </div>
+
+    <div class="form-group">
+        {{ form.electricity.label_tag }}
+        {{ form.electricity }}
+    </div>
+
+    <div class="form-group">
+        {{ form.unit_details.label_tag }}
+        {{ form.unit_details }}
+    </div>
+
+    <div class="form-group">
+        {{ form.amenities.label_tag }}
+        {{ form.amenities }}
+    </div>
+
+    <div class="form-group">
+        {{ form.appliances.label_tag }}
+        {{ form.appliances }}
+    </div>
+
+    <div class="form-group">
+        {{ form.oven.label_tag }}
+        {{ form.oven }}
+    </div>
+
+    <div class="form-group">
+        {{ form.range.label_tag }}
+        {{ form.range }}
+    </div>
+
+    <div class="form-group">
+        {{ form.air_conditioning.label_tag }}
+        {{ form.air_conditioning }}
+    </div>
+
+    <div class="form-group">
+        {{ form.water_heater.label_tag }}
+        {{ form.water_heater }}
+    </div>
+
+    <div class="form-group">
+        {{ form.hoa.label_tag }}
+        {{ form.hoa }}
+    </div>
+
+    <div class="form-group">
+        {{ form.info.label_tag }}
+        {{ form.info }}
+    </div>
+
+    <div class="form-group">
+        {{ form.hoa_info.label_tag }}
+        {{ form.hoa_info }}
+    </div>
+
+    <div class="form-group">
+        {{ form.google_maps.label_tag }}
+        {{ form.google_maps }}
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+

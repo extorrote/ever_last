@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {%load static%}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Activation</title>
+    <style>
+        
+        .activation-link {
+            color: #007bff; 
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <p>Hello {{ user.username }},</p>
+    <p>Click the link below to activate your account:</p>
+    <p><a class="activation-link" href="{{ activation_link }}">Activate Account</a></p>
+    <p>If you didn't request this, please ignore this email.</p>
+    
+    <img src={% static '/images/mi-logo-azul.png' %} alt="logo " title="surfista"> 
+</body>
+</html>

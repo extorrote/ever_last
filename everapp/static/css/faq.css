@@ -1,0 +1,130 @@
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+   
+
+  
+  }
+  
+  
+  /* Main menu styles */
+  .main-menu {
+    flex-grow: 1;
+    text-align: center;
+    border-top:1px solid rgba(255, 255, 255, 0.557);
+  }
+  
+  .main-menu ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333333;
+  }
+  
+  
+  .main-menu ul li {
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+  }
+  
+  .main-menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+  
+  .main-menu ul li a:hover {
+    background-color: #555555;
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+  
+    .main_about-text {
+        padding: 0 10px;
+    }
+  
+    .main-menu {
+        margin-top: 20px;
+    }
+  
+    .main-menu ul li {
+        display: inline-block;
+        margin: 10px 0;
+    }
+  }
+  
+  /*######## FIN DE HEADER ##################*/
+#faq {
+    
+    background-size: cover;
+    
+    padding: 40px 20px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-item h3 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.faq-item p strong {
+    color: #34495e;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .faq-container {
+        padding: 20px;
+    }
+
+    .faq-item h3 {
+        font-size: 18px;
+    }
+
+    .faq-item p {
+        font-size: 16px;
+    }
+}
+
+
+

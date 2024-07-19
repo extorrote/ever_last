@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activation Link Invalid</title>
+    <style>
+        /* Basic CSS for centering content */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 20px;
+            color: #666;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Activation Link Invalid</h1>
+        <p>The activation link you have accessed is either invalid or has expired.</p>
+        <p>Please make sure you've used the correct activation link from your email.</p>
+        <p>if you lost your link and want to get a new one you can go back to Sign up Proccess , use the same Email but a different username .</p>
+        <p>If you continue to face issues, please contact our support team.</p>
+        <p><a href="{% url 'registro' %}">Go to Sign Up Page</a></p> 
+        <p><a href="{% url 'login' %}">Login</a></p> 
+
+    </div>
+</body>
+</html>

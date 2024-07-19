@@ -1,0 +1,603 @@
+body{
+    margin:0;
+    font-family: sans-serif;
+    display:flex; /*CON ESTO NOS ASEGURAMOS DE QUE EL FOOTER SIEMPRE ESTE HABAJO ESTO HIZO QUE EL MENU PRINCIPAL SE CRECIERA DE PARA HABAJO EN TODO EL BODY*/
+    flex-direction: column;/*ESTO HIZO QUE EL MENU REGRESARA ASIA LA DERECHA*/
+    align-items: center;/*ESTO HACE QUE TODO SE PONGA EN EL ORDEN QUE LOS PUSE EN HTML*/
+
+    justify-content: center;
+    background-color: #E4F9FF ;
+    --color-principal:#0FABBC;
+   
+
+
+}
+
+.main-wrapper,header,footer{
+    width:100%;
+
+
+}
+div, body,header , nav,ul footer{
+    box-sizing: border-box;/*ESTO ES PARA QUE PONGALE LO QUE SE LE PONGA A LA CAJA CREZCA PARA ADENTRO Y NO ALTERE EL TAMAÑO DE LA CAJA,*/
+}
+
+
+h1,h1{
+    text-wrap: balance;
+
+}
+p{
+    text-wrap: pretty;
+}
+/*HEADER*/
+.header{
+    background-color: var(--color-principal);
+
+
+}
+.main-nav-bar ul {
+display:flex;/*HACE QUE SE PONGA UNO AL LADO DEL OTRO Y NO EN COLUMNA*/
+padding:0;
+justify-content: center;
+}
+
+.main-nav-bar li{
+    list-style: none;
+    margin:4px;
+}
+
+.main-nav-bar a{
+color:#ffffff88;
+display:inline-block;/*ESTO HIZO QUE OCUPEN SOLO EL ESPACIO NECESARIO, ESTABAN OCUPANDO TODA LA BARRA DE NAV*/
+padding:6px 9px;
+
+}
+.main-nav-bar a:hover{
+    color:white;
+}
+
+nav{/*ESTE nav INCLUYE EL MENU DEL aside TAMBIEN*/
+    position:sticky;
+    top:0;
+}
+nav a{
+    text-decoration:none;
+}
+/*###################################################################################*/
+
+
+
+/* MAIN SECTION*/
+
+
+
+/*ESTA ES LA CAJA PADRE QUE CONTIENE LAS 3 SESIONES DE ESTE holy-grail*/
+.main-wrapper{
+    max-width: 80%;
+    display:flex;/*ESTO HIZO QUE LOS BOTONES SE PUSIERAN COMOHACIA HABAJO Y COMO QUE SEPARARAN LAS LETRAS DEL p*/
+    flex-grow: 1;  /*ESTO HACE QUE SE ESTIREN Y OCUPEN TODO EL TAMAÑO DISPONIBLE EN LA CAJA QUE LOS CONTIENE EN ESTE CASO HACE QUE LOS ELEMENTOS QUE ESTAN DENTRO DE main-wrapper SE UNAN AL footer*/
+    flex-wrap: wrap;/*SE ESTABA ROMPIENDO ALGO CUADO LA ACHIXABAMOS ENTONCES LE PUSIMOS ESTO PARA QUE SE PUEDA TITAR PARA HABAJO , PERO PARA ESTO LE TENEMOS QUE DAR UN flex-basis:0;*/
+    justify-content: center;
+    gap:10px;/*ESTO PONE UNA SEPARACION ENTRE LAS CAJAS TIPO ENDIJA que agarra el color del body*/
+    position: sticky;
+    top:0;
+    border-left:1px solid rgba(128, 128, 128, 0.16);
+    height:710vh;
+
+}
+
+@media screen and (max-width:460px){
+    .main-wrapper{display:block;}
+}
+
+aside, main{
+    padding:10px 20px;/* PADDING ASIA ADENTRO ENTRE LAS CAJAS Y LAS LETRAS*/
+    flex-basis: 0;
+    background-image: linear-gradient(to top, #E4F9FF .1%, #fff );
+    height:710vh;
+    border-left:1px solid rgba(128, 128, 128, 0.16);
+
+}
+
+.h2_main{
+    font-size: 25px;
+   margin-bottom: 10px;
+   color:#000000a5;
+}
+.h2_aside{
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color:#000000a5;
+}
+
+.titulo_menu{
+    color:#000000a5;
+}
+
+.foto__steve-foto{
+    width: clamp(545px, 100%,600px);
+    height: clamp(300px ,100% ,450px);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.397),rgba(0, 0, 0, 0.422)),url(/static/images/steve-walker.png);
+    background-repeat: no-repeat;
+    background-position: center 100px;
+    margin:auto;
+    margin-bottom:15px;
+    margin-top: -75px;
+    border-radius: 10px;
+
+   position:sticky;
+}
+
+.boton-contratar-abogado {
+    max-width:clamp(400px,100dvw,400px);
+    height:50px;
+    background-color: var(--color-principal);
+    margin:auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-top:-5px;
+}
+
+
+
+.boton-contratar-abogado > a {
+    text-decoration: none;
+    display:inline-block;
+    margin:auto;
+    margin-left: 35%;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 2%;
+    color:white;
+
+
+}
+
+@media screen and (max-width:481px){
+    .boton-contratar-abogado{
+        width:65dvw;
+    }
+}
+
+
+.our_prices_include{
+
+    width: clamp(400px, 100%,1000px);
+    height: clamp(300px ,100% ,400px);
+    background-image: url(/static/images/attorney.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:10px 0;
+}
+
+.driving-drunk-picture{
+    width: clamp(400px, 100%,600px);
+    height: clamp(300px ,100% ,400px);
+    background-image: url(/static/images/driving-drunk.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:20px 0;
+}
+
+.violencia_domestica-picture{
+    width: clamp(400px, 100%,600px);
+    height: clamp(300px ,100% ,400px);
+    background-image: url(/static/images/violencia-domestica.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:20px 0;
+}
+
+.springfield_courthouse{
+    width: clamp(280px, 100%,300px);
+    height: clamp(300px ,100% ,300px);
+    background-image: url(/static/images/springfield-courthouse.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -40px;
+    margin:20px 0;
+    border-radius: 10px;
+}
+@media screen and (max-width:1280px){
+    .driving-drunk-picture{
+        width:auto;
+        border-radius: 5px;
+    }
+
+    .foto__steve-foto{
+        width:auto;
+        border-radius: 5px;
+    }
+
+    .our_prices_include{
+        width:auto;
+        border-radius: 5px;
+        background-position: -200px 0;
+    }
+
+    .violencia_domestica-picture{
+        width:auto;
+        border-radius: 5px;
+    }
+
+    .springfield_courthouse{
+        width:auto;
+        border-radius: 5px;
+    }
+}
+
+
+
+
+
+
+.color_fondo_menu_left{
+    width:100%;
+    height:88vh;
+    background-color: var(--color-principal);
+    border-radius: 20px;
+    box-sizing: border-box;
+
+}
+
+@media screen and (max-width:500px){
+    .color_fondo_menu_left{
+        height:100%;
+    }
+
+    .titulo_menu{
+        color:#2C4E80
+    }
+
+    .form__title{
+        color:#2C4E80;
+    }
+}
+
+
+.main-wrapper aside{
+    flex-grow:1;/*ESTO HACE QUE SE ESTIREN Y OCUPEN TODO EL TAMAÑO DISPONIBLE EN LA CAJA QUE LOS CONTIENE*/
+
+
+}
+
+
+.secondary-nav-bar{
+    min-width:10rem auto;
+    text-align: center;
+    height:100dvh;
+
+
+
+
+
+}
+
+
+
+.secondary-nav-bar ul{
+    padding:0;
+
+}
+
+
+.secondary-nav-bar li{
+    list-style: none;
+
+}
+.secondary-nav-bar a{
+    color:rgba(255, 255, 255, 0.516);
+    min-width: 220px;
+
+    background-color: var(--color-principal);
+    gap:10px;
+    display:inline-block;
+    padding:10px;
+    margin:10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px white;
+}
+
+.secondary-nav-bar a:hover{
+    color:white
+}
+
+@media screen and (max-width:1280px){
+    .secondary-nav-bar a{
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width:480px){
+    .secondary-nav-bar a{
+            min-width:220px;
+    }
+}
+
+.secondary-nav-bar a:hover{
+    background-color: #48e;
+
+}
+
+/*ESTO SE LO DIMOS PARA QUE SEPA CUANDO ENCOJERSE O DESAPARECER */
+.aside:last-child{
+    min-width: 10rem;
+    max-width: 5rem;
+}
+
+
+
+/*########################################### CONTACT SECTION, PROJECT 2 ####################################*/
+.form{
+min-height: 60vh;
+display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding:30px 0;
+container-name: form;
+container-type: inline-size;
+
+background-repeat: no-repeat;
+background-position: 10px 140px;
+background-size: 100%;
+}
+
+.form__form{
+
+padding:12px;
+max-width: 600px;
+width:100%;/*CON ESTE HACE QUE NO SE DEFORME CUANDO ACHICO LA PANTALLA*/
+display:grid;/*ESTO SE LO PUSIMOS DESPUES PARA TRABAJAR CON LOS MEDIA QUERIES */
+gap:12px;
+background:linear-gradient(to top,#18233f11,#18233f33);
+box-shadow: 0px 0px 12px #0006;
+padding:12px;
+border-radius: 12px;
+margin-bottom: 30px;
+
+
+}
+
+.form__input-container :is(input,textarea){
+width:95%;
+padding: 9px ;
+font-size: 16px;
+margin:4px;
+border:none;
+box-shadow: 2pk 2px 4px #0003 ;
+
+
+}
+.form__input-container :is(label){
+    color:rgba(0, 0, 0, 0.603);
+    font-weight: 900;
+
+}
+
+.form__input-container textarea{
+resize:none;
+min-height: 120px;
+font-family: inherit;
+}
+
+.form__input-container input[type="submit"]{
+padding:12px;
+background-color: var(--color-principal);
+color:white;
+width:98%;
+border-radius: 5px;
+}
+
+.form__title{
+font-size: 2.6rem;
+color:#18233f77;
+}
+/*########################################ESTO NO FUNCIONO####################################*/
+@container form (min-width:56.25rem){
+
+.form__form{
+background-image: linear-gradient(#18233fbc,#18233fc1),url(/static/images/imagen-programing.png);
+grid-template-areas:
+"name lastname"
+"email email"
+"message message"
+"button button";
+/*grid-template-columns: 1fr 1fr;ESTO DEBERIA PONER 2 COLUMNAS JAL PRINCIPIOY NO LO ESTA HACIENDO*/
+
+padding:30px;
+border:12px;
+
+}
+.form__input-container:nth-child(1){
+grid-area: name ;
+}
+.form__input-container:nth-child(2){
+grid-area: lastname;
+}
+
+.form__input-container:nth-child(3){
+grid-area: email;
+}
+
+.form__input-container:nth-child(4){
+grid-area: message;
+}
+
+.form__input-container:nth-child(5){
+grid-area: button;
+}
+
+.form__input-container :is(input,textarea){
+box-shadow: none;
+border-radius: 4px;
+
+}
+
+.form__input-container input[type="submit"]{
+background-color: #48e;
+
+}
+
+}
+
+.div-telefonos{
+    box-sizing: border-box;
+    min-height: 25vh;
+    width: clamp(400px , 100% ,700px);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-principal);
+    background-repeat: no-repeat;
+    border: 2px solid rgba(0, 0, 0, 0.404);
+    margin-bottom: 60px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+    }
+
+    @media screen and (max-width:1400px){
+        .div-telefonos{
+            min-height:35vh;
+            width:340px;
+        }
+
+        .form__title{
+            font-size: 35px;
+        }
+    }
+.bandera-colombia{
+    margin:auto;
+    width:100%;
+    height:50px;
+    background-image: url(/static/images/bandera-colombia.png);
+    background-size:50px;
+    background-repeat: no-repeat;
+}
+
+
+.bandera-usa{
+    margin:auto;
+    width:100%;
+    height:50px;
+
+
+    background-image: url(/static/images/bandera-usa.png);
+    background-size:70px;
+    background-repeat: no-repeat;
+    background-position: -6px;
+}
+
+
+
+.bandera-colombia>h2{
+    color:rgba(255, 255, 255, 0.532);
+
+}
+
+.bandera-usa>h2{
+    color:rgba(255, 255, 255, 0.532);
+
+}
+
+@media screen and (max-width:1400px){
+    .bandera-colombia>h2, .bandera-usa>h2{
+        font-size: 15px;
+        margin:30px;
+        margin-left:60px;
+    }
+    .bandera-colombia{
+        background-position: 30px;
+    }
+
+    .bandera-usa{
+        background-position: 20px;
+    }
+}
+
+
+
+.div-telefonos >h2{
+    margin-bottom: -30px;
+    margin-top: 10px;
+    color:rgba(255, 255, 255, 0.532);
+    border-bottom:2px solid rgba(255, 255, 255, 0.532);
+
+}
+
+@media screen and (max-width:1280px){
+
+    .bandera-colombia >h2{
+        margin-left: 80px;
+        font-size: 12px;
+        margin-top: 20px;
+        color:rgba(255, 255, 255, 0.854);
+    }
+
+    .bandera-usa >h2{
+        margin-left: 81px;
+        font-size: 13px;
+        color:rgba(255, 255, 255, 0.854);
+
+    }
+}
+
+
+
+
+/*ESTO HACE QUE EL ULTIMO CAJON DE LA DERECHA DESAPAREZCA CUANDO EL width maximo SEA DE 600PX*/
+@media screen and (max-width:1100px){
+    aside:last-child{
+        display:none;
+    }
+}
+
+/*ESTO HACE QUE CUANDO EL width DE LA CAJA DEL MEDIO LLEGUE A 400 se ponga debajo del menu del lado*/
+@media screen and (max-width:1060px){
+    .main-wrapper{
+        flex-direction: column;
+    }
+}
+
+
+main{
+
+    min-width: 300px;
+    flex-grow: 2;/*ESTO HACE QUE SE ESTIREN Y OCUPEN TODO EL TAMAÑO DISPONIBLE EN LA CAJA QUE LOS CONTIENE */
+    height:710dvh;
+
+}
+
+
+
+footer{
+    position:absolute;
+
+    margin:auto;
+
+    height:100px;
+    overflow-x:hidden;
+    width: clamp(444px, 100% ,500px);
+    background-color:var(--color-principal);
+    color:#fffd;
+    box-shadow: 0px 0px 50px black;
+
+}
+
+@media screen and (max-width:460px){
+    footer{margin-left:-70px;}
+}
+
+footer h4{
+    text-align: center;
+    font-size:11px;
+    letter-spacing: 14px;
+    margin:auto;
+    margin-top:45px;
+    margin-left:2px;
+
+}

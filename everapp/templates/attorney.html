@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {%load static%}
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+    <!-- Primary Meta Tags -->
+   
+        
+        <link 
+        rel="stylesheet"
+        type="text/css"
+        href= {% static 'css/attorney.css'%} />
+        
+    </head>
+<body>
+    <!-- EL holy - graid  SE PUEDE COMPONER DE 3 ETAPAS, 5 SESIONES  LA ETAPA PRINCIPAL ES UN header EN EL CUAL PODEMOS METER UN MENU DE NAVEGACION, 
+    DESPUES TENEMOS UNA SESION PRINCIPAL EN LA QUE TENEMOS UN main content QUE ES EL CONTENIDO PRINCIPAL DE LA WEB Y 2 COLUMNAS A LOS LADOS UNA PUEDE SER UN MENU LATERAL Y OTRA PUEDE SER UNA SESION DE INTERES, POR EJEMPLO
+    Y HABAJO DE TODO TENEMOS EL footer  -->
+
+    <header class="header">
+        <nav class="main-nav-bar">
+            {% if user.username %}
+                <ul>
+                    <li>
+                        <a href= '#dui'> DUI  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                        
+                        <li>
+                            <a href='#steve'>Hire Us </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                            
+                        
+                            
+                        <li>
+                            <a href='#domestic_assault'> Domestic Assault </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+    
+                        <li>
+                            <a href= '#contact' tarjet=blank > Contact  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+
+
+
+
+                        
+
+
+
+
+                        
+                </ul>
+                
+
+        {% else%}
+                <ul>
+                    <li>
+                        <a href=  '#dui'> DUI  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                    </li>
+                    
+                    <li>
+                        <a href='#steve'>Hire Us </a> <!--EL Inicio ES EL NAME DE LA url-->
+                    </li>
+                        
+                    
+                        
+                    <li>
+                        <a href= '#domestic_assault'> Domestic Assault </a> <!--EL Inicio ES EL NAME DE LA url-->
+                    </li>
+
+                    <li>
+                        <a href='#contact' tarjet=blank > Contact  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                    </li>
+
+
+                </ul>
+
+
+                            
+        {% endif%}
+            
+        </nav>
+    </header>
+
+    
+    <div class="main-wrapper">
+        <aside class="secondary-nav-bar">
+            <h2 class="titulo_menu">choose an Option</h2>
+            <nav>
+                {% if user.username %}
+                <ul>
+                    <li>
+                        <a href=  '#dui'> DUI  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                        
+                        <li>
+                            <a href='#steve'>Hire Us </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                            
+                        
+                            
+                        <li>
+                            <a href= '#domestic_assault'> Domestic Assault </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+    
+                        <li>
+                            <a href='#contact'tarjet=blank > Contact  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+
+
+                        <li>
+                            <a href="{% url 'home'%}" tarjet=blank > Main Layout  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+
+
+
+
+
+                        
+
+
+
+
+                        
+                </ul>
+                
+
+        {% else%}
+                <div class="color_fondo_menu_left">
+                <ul >
+                    
+                        <li><a href="{% url 'registro'%}"  tarjet=blank>Sign Up</a></li> 
+                        <li><a href="{% url 'login'%}"  tarjet=blank>login</a></li>           
+                        <li>
+                            <a href= '#steve'>Hire Us </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                            
+                        
+                            
+                        <li>
+                            <a href= '#domestic_assault'> Domestic Assault </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+    
+                        <li>
+                            <a href= '#contact' tarjet=blank > Contact  </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                    <li class="courthouse_info-button">
+                        <a href='#courthouse' class="courthouse_info-button"> Coutrhouse info</a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+                    <li>
+                        <a href='#dui' class="about_us"> DUI info</a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+
+
+                    <li>
+                        <a href='#contact' class="about_us"> Contact Us </a> <!--EL Inicio ES EL NAME DE LA url-->
+                        </li>
+
+                        <li>
+                            <a href='#steve' class="about_us"> Attorney's Info </a> <!--EL Inicio ES EL NAME DE LA url-->
+                            </li>
+
+                            <li>
+                                <a href="https://robertson.tncrtinfo.com/cmCaseList.aspx" Tarjet="_blank" > See your case </a> <!--EL Inicio ES EL NAME DE LA url-->
+                            </li>
+
+                            <li>
+                                <a href="{% url 'home'%}" Tarjet="_blank" > Back Home </a> <!--EL Inicio ES EL NAME DE LA url-->
+                            </li>
+                </ul>
+            </div>
+
+
+                            
+        {% endif%}
+        </nav>
+        </aside>
+        <main> 
+            <h2 id="dui" class="h2_main"> What are the penalties for a DUI conviction in Tennessee? </h2>
+            <div class="driving-drunk-picture"></div>
+            
+            <ul>
+                <h3>Penalties for DUI in Tennessee include:</h3><br/>
+                <strong>1st. Infringement:</strong>
+                <li>Jail time: 48 hours-11 months and 29 days (BAC of 0.20 or greater minimum jail time 7 consecutive days)</li>
+                <li>License revocation: 1 year, </li>
+                <li>You will be ordered to participate in a DUI school, </li>
+                <li> For compensation to any person who has suffered physical injury or personal loss,</li>
+                <li> Fine of $350-$1,500,</li>
+                <li> For your first violation, the average costs will rise to $4,900 for tow truck, bail, high risk insurance, court costs, school, and compensation,</li>
+                <li>The judge may order you to install an ignition interlock device in your vehicle at your expense, minimum 1st cost. year $810, and </li>
+                <li> At the judge's discretion, he or she may order alcohol and drug treatment.</li>
+            </ul>
+
+            <ul>
+                
+                <strong> 2nd. Infringement:</strong>
+                <li>Jail time: 40 days to 29 days, </li>
+                <li> Mandatory fine of $600 to $3,500</li>
+                <li> License revocation for 2 years. Restrictive license available after 1 year,</li>
+                <li> Subject to vehicle seizure or confiscation</li>
+                <li>You will be ordered to attend DUI school, </li>
+                <li> The judge may order you to install an ignition interlock device in your vehicle at your expense for 6 months after reinstallation.</li>
+                <li> If there are two (2) DUI convictions within 5 years, an ignition interlock device will be required at your expense after reinstatement.y</li>
+                <li>Will pay compensation to any person for suffering or loss </li>               
+            </ul>
+
+            <ul>
+                <strong> 3rd. Infringement:</strong>
+                <li> Jail time: 120 days to 11 months and 29 days in jail,</li>
+                <li>Mandatory fines of $1,100 to $10,000 </li>
+                <li> License revocation for a period of 3-10 years, WITHOUT the possibility of obtaining a restricted license.</li>
+                <li> Subject to vehicle seizure or confiscation</li>
+                <li>DUI school, </li>
+                <li> The judge may order you to install an ignition interlock device in your vehicle at your expense, and</li>
+                <li> If there are two (2) DUI convictions within 5 years, an ignition interlock device will be required at your expense after reinstatement.</li>
+            </ul>
+
+            <ul>
+                <strong> 4a. Infringement:</strong>
+                <li> Class E Felony,</li>
+                <li>Jail time: 1 year (365 days) with a minimum of 150 consecutive days served, </li>
+                <li> Mandatory fine of $3,000 to $15,000,</li>
+                <li> License revocation for a period of 5 years, NO restricted license available,</li>
+                <li>Subject to vehicle seizure or confiscation </li>
+                <li> DUI school,</li>
+                <li>The judge may order the installation of an ignition interlock device at his expense, </li>
+                <li>If there are two (2) DUI convictions within 5 years, an ignition interlock device will be required, at your expense, upon reinstatement. </li>
+            </ul>
+<br/><br/>
+<strong> Talk to a Qualified Drunk Driving Defense Attorney Today</strong>
+This article is intended to be helpful and informative, but legal matters can be complicated and stressful. A qualified drunk driving defense attorney can address your particular legal needs, explain the law, and represent you in court. Take the first step now and contact a qualified drunk driving defense attorney near you to discuss your particular legal situation.
+            <h2 id="steve" class="h2_main"> Who's Steve Walker </h2>
+                quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                
+                    <div class="foto__steve-foto">
+                        
+                    </div>
+
+                    
+                    <div class="boton-contratar-abogado">
+                        <a target=blank href="https://buy.stripe.com/dR62cd8U2fIa6YM001"> Hire Now </a>
+                    </div>
+
+
+
+
+                
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id 
+            <h2 class="h2_main"> WHAT OUR PRICES INCLUDE </h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo explicabo atque, reprehenderit laudantium quis incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                <div class="our_prices_include"></div>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+
+
+
+                <h2 id="domestic_assault" class="h2_main"> Domestic Asault </h2>
+                <div class="violencia_domestica-picture"></div>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                
+                
+                
+                
+            </p>
+            <section id="contact"class="form">
+                <h2 class="form__title">Send us an Email</h2>
+                <form class="form__form" action="https://formsubmit.co/wwwstephen95live@gmail.com" method="POST">
+                    <div class="form__input-container">
+                        <label>Nombre
+                            <input type="text" placeholder="john ">
+                        </label>
+            
+                        <label>Apellido
+                            <input type="text" placeholder="Doe">
+                        </label>
+            
+                        <label>Email
+                            <input type="email" placeholder="Mail@example.com">
+                        </label>
+            
+                        <label>Mensaje
+                            <textarea type="text" placeholder="Your message"></textarea>
+                        </label>
+                        <input type="submit">
+                    </div>
+                </form>
+                <div id="contact" class="div-telefonos">
+                <h2 class="telefonos_title"> You Can also Contact us via Phone :  </h2>
+                <div class="bandera-colombia"> 
+                    <h2 type=telefonos > Atencion en Español: +1 615-938-0458 </h2>
+                <div class="bandera-usa"> 
+                    <h2> Atention in english: +1 615-429-6879</h2>
+
+                    </div>
+                </div>
+                </div>
+            </section>
+            <footer> <h4> &copy;CHRISTHIAN STEPHEN </h4> </footer>
+            
+        </main>
+        <aside>
+            <h2  id="courthouse"class="h2_main">  Springfield Courthouse</h2>
+            <p>
+                <strong> Located in 529 SHOUTH BROWN STREET</strong><br/>
+                Robertson County Courthouse in Springfield, Tennessee dates from 1879.[1] The building's north wing, south wing, and central clock tower were added in 1929–30. The architect was W.C. Smith and the building contractor was the firm of Patton & McInturff.[2] The architects for the expansion were Edward E. Dougherty and Thomas W. Gardner of Nashville.[3]<br/><br/>
+
+                The building was listed on the National Register of Historic Places in 1978.[1][3]<br/><br/>
+                
+                <div class="springfield_courthouse"></div>
+            
+                
+                quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                incidunt maxime deleniti? Sed quod incidunt sequi, aspernatur accusamus tempore velit ducimus fugiat, totam quidem perferendis!
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit, iste voluptatibus voluptates exercitationem sequi!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam maiores odio modi esse nostrum odit consequuntur doloremque, fugit expedita accusantium sit sint, facere quisquam cumque harum excepturi quibusdam quos necessitatibus.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, quas rem, omnis repudiandae perspiciatis sit quaerat, maxime magni vel ea cum quod quo magnam laudantium facilis suscipit ab corrupti provident?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente accusamus minus alias quaerat vero consequuntur aperiam quasi maiores recusandae ex, doloribus sunt amet, molestias temporibus rerum id inventore dolorem.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident veniam cum porro quibusdam quaerat, dignissimos dolorem eveniet itaque mollitia magnam, cumque vel, fuga maiores atque vitae. Numquam iure labore recusandae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores eligendi ad omnis similique maiores, ipsum beatae quaerat dolores sit id reprehenderit ratione quo delectus impedit.
+            </p>
+
+        </aside>
+    </div>
+
+    
+</body>
+
+</html>

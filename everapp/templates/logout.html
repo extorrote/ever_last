@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--initial scale es el tema del zoom-->
+<meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+
+
+     <meta name="programador" content="christian stephen">
+     <meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+     <meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+     
+     <meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+     <link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+     
+     <meta property="og:title" content="Puerto Vallarta Web Developer">
+     <meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+     <meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+     
+   <!--ESTO SE LLAMA FABICON EL type SE LE PONE PARA QUE EL NAVEGADOR LO CARGUE MAS RAPIDO -->
+    <link rel="icon" href="static/images/foto-tarjeta-ico.ico" type="image/ico"> 
+    <meta name="og:image" content="/static/images/mi-logo-azul.png">
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+<!-- Primary Meta Tags -->
+<title> Toro WebSites: </title>
+
+
+
+
+{% block title %}
+
+{% endblock %}
+
+
+
+<!--AQUI CARGARE LOS STATIC-->
+
+<!-- PARA QUE EL LOGO  FUNCIONE DEBO HACER EL load static-->
+{% load static%}
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/styles.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+
+
+</head>
+
+
+
+
+
+    <header class="header">
+        {% if user.username %}
+    <div class="menu-left-container">
+        <ul class="header__nav-left-list">
+            
+            <li class="header__nav-left-item"> <a href="{% url 'logout'%}" tarjet=blank tarjet=blank class="about_us">logout|</a> </li>
+            <li class="header__nav-left-item"> <a href="{% url 'guardar_cliente'%}" tarjet=blank >New Client| </a> </li>
+            <li class="header__nav-left-item"> <a href="{% url 'ver-clientes' %}"> see clients</a></li>
+           
+        </ul>
+    </div>
+
+    
+
+        {% else%}
+    <div class="menu-left-container">
+        <ul class="header__nav-left-list">
+            
+            <li class="header__nav-left-item"> <a href="{% url 'index'%}" tarjet=blank tarjet=blank class="about_us">Home|</a> </li>
+            <li class="header__nav-left-item"> <a href="{% url 'registro'%}" tarjet=blank >SignUp| </a> </li>
+            <li class="header__nav-left-item"> <a href="{% url 'login' %}">login</a></li>
+        </ul>
+    </div>
+    {% endif%}
+
+
+
+        <!-- ESTE ES EL ICONO PARA ABRIR MIS PROJECTS-->
+
+        <input type="checkbox" class="header__checkbox"id="open_menu">
+        <label for="open_menu" class="header__open-nav-button " role="button">
+
+             <svg  xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 -960 960 960" width="100px" fill="#48e"><path d="M144-264v-72h480v72H144Zm621-24L573-480l192-192 51 51-141 141 141 141-51 51ZM144-444v-72h384v72H144Zm0-180v-72h480v72H144Z"/></svg><!-- ESTE ES EL ICONO PARA ABRIR MIS PROJECTS-->
+             </label>
+        
+        <div class="header__logo-container">
+            <!--<image  src={%  static '/images/ADA-azul.png' %} />-->
+        </div>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                
+                <li class="header__nav-item"> <a href="{% url 'project_holy_grail'%}" tarjet=blank tarjet=blank >Project 2|</a> </li>
+                <li class="header__nav-item"> <a href="{% url 'about_me'%}" tarjet=blank > Project 3| </a> </li>
+                <li class="header__nav-item"> <a href="{% url 'project4' %}"> Project 4</a></li>
+            </ul>
+
+
+
+    
+
+
+
+
+        </nav>
+    </header>
+    
+<br/>
+
+
+
+
+
+
+
+
+
+<!--AQUI VOY A CREAR UN TRIANGULO PARA DARLE UN EFECTO 3D A LA CAJA DEL -->
+
+    
+
+
+                        <!-- ###########################################################################################################-->
+
+
+                        <body>             
+
+    
+        {% block content %}
+
+    
+{% endblock %}
+
+    </div>   
+    </div>
+
+
+
+
+
+
+</body>
+<footer class="footer">  &#0174; Christhian Stephen 2024  </footer>  
+</html>

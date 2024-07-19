@@ -1,0 +1,93 @@
+
+{% load static%}
+
+<meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="programador" content="christian stephen">
+    <meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+    <meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+    
+    <meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+    <link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+    
+    <meta property="og:title" content="Puerto Vallarta Web Developer">
+    <meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+    <meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/styles.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+
+{%block content%}
+<header>
+    <div class="header-container">
+        <div class="header-content">
+            <div class="main_about-picture">
+                <img src="/static/images/foto-ever.png" alt="Everardo's Photo">
+            </div>
+            <div class="main_about-text">
+                <h1>About Ever</h1>
+                <p>
+                    When considering Ever as your real estate agent in Puerto Vallarta, you're choosing a seasoned professional with an unmatched passion for finding dream homes. With over 5 years of experience in the vibrant Puerto Vallarta real estate market, Ever has cultivated an impressive track record of successful transactions and delighted clients.
+
+                    His deep understanding of the local market trends, combined with a meticulous attention to detail, ensures that every client receives personalized attention and expert guidance throughout the buying process. Ever's commitment to integrity and transparency means you can trust him to navigate negotiations and contracts with your best interests at heart.
+
+                    Those who have purchased properties through Ever rave about his unwavering dedication and his ability to match homes perfectly to their needs and desires. His clients not only find their dream homes but also gain a trusted advisor who continues to support them long after the sale is finalized.
+
+                    Choosing Ever as your real estate agent isn't just a decision to buy a home; it's a decision to invest in a seamless, fulfilling experience guided by a true professional who prioritizes client satisfaction above all else.
+                </p>
+            </div>
+        </div>
+        <nav class="main-menu">
+            {% if user.username %}
+                <ul>       
+                    <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+                    <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+                    <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+                    <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+                    <li><a href="#">Services</a></li>
+                    <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+                    <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+                    
+                    <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                   
+                    <li><a href="{% url 'logout'%}" >Logged in as  {{ user.username }} : Logout</a></li>
+                </ul>
+                
+        
+            
+        
+                {% else%}
+                <ul>       
+                    <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+                    <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+                    <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+                    <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+                    <li><a href="#">Services</a></li>
+                    <li><a href="{% url 'login'%}"  tarjet=blank>login</a></li>            
+                    <li><a href="{% url 'sign_up'%}"  tarjet=blank>Sign Up</a></li>                   
+                    <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+                    <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                    
+                </ul>
+            
+            {% endif%}
+            
+        </nav>
+    </div>
+</header>
+
+{%endblock%}

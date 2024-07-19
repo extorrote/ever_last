@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ property.location}} Details</title>
+
+    {%load static%}
+    
+    
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+
+
+     <meta name="programador" content="christian stephen">
+     <meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+     <meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+     
+     <meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+     <link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+     
+     <meta property="og:title" content="Puerto Vallarta Web Developer">
+     <meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+     <meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+     
+
+    {%comment%}
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+    <link  rel='icon'href={%  static 'images/foto-ever.ico' %} alt="logo pagina"/>
+    <meta name="description" content="Explore Puerto Vallarta real estate with Everardo: beachfront properties, luxury homes, and the best market prices with personalized service to find your perfect paradise.">
+    <meta name="keywords" content="Puerto Vallarta real estate, beachfront properties, luxury homes Puerto Vallarta, Everardo real estate, Puerto Vallarta condos, vacation homes, Puerto Vallarta rentals, affordable homes Puerto Vallarta, real estate market Puerto Vallarta, investment properties.">
+    <meta name="title" content="Find Your Dream Home - Puerto Vallarta Real Estate | Best Properties & Prices ">
+
+    <meta name="OG:TITLE" content=" Puerto Vallarta Real Estate">
+    <meta name="OG:IMAGE" content="images/foto-edificio.jpeg">
+    <meta name="OG:description" content="Explore Puerto Vallarta real estate with Everardo: beachfront properties, luxury homes, and the best market prices with personalized service to find your perfect paradise.">
+    <meta name="OG:url" content="home">
+{%endcomment%}
+    <link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/styles.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+
+<!-- ############## TROZO DE CODIGO PARA QUE LAS IMAGENES TENGAN BOTON PARA CERRARLAS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            infobar: false, // Disable the bottom toolbar
+            buttons: [
+                'close'
+            ],
+            btnTpl: {
+                close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Close">' +
+                    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
+                    '</button>'
+            }
+        });
+    });
+</script>
+
+</head>
+<body>
+    {%block content%}
+    <h1 class="ver-property_title">Copy the link to Share this property </h1>
+    <main class="container">
+        <div class="articulos-item">
+            
+            <div class="see_all_properties">
+                
+                    <div class="property-item">
+
+                <p><strong>Propery ID:</strong> {{ property.id }}</p>
+                <p><strong>Location:</strong> {{ property.location }}</p>
+                <p><strong>Price:</strong> ${{ property.price }}</p>
+                <h3>Gallery</h3>
+                <div class="image-grid">
+                    {% if property.imagen1 != 'null' and property.imagen1.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen1.url }}">
+                                <img src="{{ property.imagen1.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+                            {% if property.imagen2 != 'null' and property.imagen2.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen2.url }}">
+                                <img src="{{ property.imagen2.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+                            {% if property.imagen3 != 'null' and property.imagen3.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen3.url }}">
+                                <img src="{{ property.imagen3.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+                            {% if property.imagen4 != 'null' and property.imagen4.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen4.url }}">
+                                <img src="{{ property.imagen4.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+
+                           
+                            {% if property.imagen5 != 'null' and property.imagen5.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen5.url }}">
+                                <img src="{{ property.imagen5.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+                            
+                            {% if property.imagen6 != 'null' and property.imagen6.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen6.url }}">
+                                <img src="{{ property.imagen6.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+
+                            {% if property.imagen7 != 'null' and property.imagen7.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen7.url }}">
+                                <img src="{{ property.imagen7.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+                            {% if property.imagen8 != 'null' and property.imagen8.url|length >= 1 %}
+                            <a class="fancybox" href="{{ property.imagen8.url }}">
+                                <img src="{{ property.imagen8.url }}" class="thumbnail" />
+                            </a>
+                            {% endif %}
+
+                            {% if property.video != 'null' and property.video.url|length >= 1 %}
+                                <video class="video_property" width="280"  controls src="{{ property.video.url }}" alt="Property Video"></video>
+                            {% endif %}
+                </div>
+                
+                
+                <div class="share_button">
+                    <a href="{% url 'home'%}"  tarjet=blank >Home</a>
+                </div> 
+                <details>
+                    <summary> See Info </summary>
+                            <p><strong>Size:</strong> {{ property.property_size }}</p>
+                            <p><strong>Bedrooms:</strong> {{ property.bedrooms }}</p>
+                            <p><strong>Bathrooms:</strong> {{ property.bathrooms }}</p>
+                            <p><strong>Type:</strong> {{ property.property_type }}</p>
+                            <p><strong>Property Conditions:</strong> {{ property.property_status }}</p>
+                            <p><strong>MLS:</strong>  href="{{ property.mls }}</p>
+                        
+                            <p><strong>Agent:</strong> {{ property.agent_name }}</p>
+                            <p class="active"><strong>Status:</strong> {{ property.mls_status }}</p>
+                            
+                            <p><strong>Development Name:</strong> {{ property.development_name }}</p>
+                            <p><strong>Pre Construction:</strong> {% if property.pre_construction %}Yes{% else %}No{% endif %}</p>
+                            <p><strong>Pet Friendly:</strong> {% if property.pet_friendly %}Yes{% else %}No{% endif %}</p>
+                            <p><strong>Primary View:</strong> {{ property.primary_view }}</p>
+                            
+                
+                <details>
+                    <summary> Extra Info </summary>
+                            <p><strong>Water:</strong> {{ property.water }}</p>
+                            <p><strong>Stories:</strong> {{ property.stories}}</p>
+                            <p><strong>Furnished:</strong> {{ property.furnished}}</p>
+                            <p><strong>Comunity:</strong> {{ property.comunity}}</p>
+                            <p><strong>Sewer:</strong> {{ property.sewer}}</p>
+                            <p><strong>Walls</strong> {{ property.walls }}</p>
+                            <p><strong>Road type:</strong> {{ property.road_type }}</p>
+                            <p><strong > Electricity:</strong>  {{ property.electricity}}</p>                      
+                            <p><strong>Unit Details:</strong> {{ property.unit_details }}</p>
+                            <p><strong>Amenities:</strong> {{ property.amenities}}</p>
+                            <p><strong>Appliances:</strong> {{ property.appliances }}</p>
+                            <p><strong>Oven:</strong> {{ property.oven}}</p>
+                            <p><strong>Rannge:</strong> {{ property.range }}</p>
+                            <p><strong>Air Conditioning:</strong> {{ property.air_conditioning }}</p>
+                            <p><strong >Water Heater:</strong>  {{ property.water_heater}}</p>                      
+                            <p><strong>HOA:</strong> {{ property.hoa }}</p>
+                            <p><strong>Info:</strong> {{ property.info}}</p>
+                            <p><strong>HOA Info:</strong> {{ property.hoa_info }}</p>
+                            <p><strong>Oven:</strong> {{ property.oven}}</p>
+                            <p><strong>Rannge:</strong> {{ property.range }}</p>
+                            <p><strong>Updated Date:</strong> {{ property.created }}</p>
+
+                            <p><strong> Google Maps Location</strong></p>
+                            {% if property.google_maps %}
+                                <div class="map-container">
+                                {{ property.google_maps | safe }}  {# Use | safe filter to render HTML content #}
+                                </div>
+                            {% else %}
+                                <p>Google Maps location not available for this property.</p>
+                            {% endif %}
+                </details>             
+                </div>
+                
+
+                
+                
+                    
+            </div>
+            </div>
+            <main>
+        {%endblock%}      
+</body>
+</html>

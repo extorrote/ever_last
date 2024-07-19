@@ -1,0 +1,122 @@
+
+{%load static %}
+
+<meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/styles_portfolio.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+{% block content %}
+<header>
+    <div class="header-container">
+        <div class="header-content">
+            <div class="main_about-picture">
+                <img src="/static/images/foto-ever.png" alt="Everardo's Photo">
+            </div>
+            <div class="main_about-text">
+                
+                </p>
+            </div>
+        </div>
+        <nav class="main-menu">
+            
+            {% if user.username %}
+            <ul>       
+                <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+                <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+                <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+                <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+                <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+                
+                <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                   
+                <li><a href="{% url 'logout'%}" >Logged in as  {{ user.username }} : Logout</a></li>
+            </ul>
+            
+    
+        
+    
+            {% else%}
+            <ul>       
+                <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+                <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+                <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+                <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'login'%}"  tarjet=blank>login</a></li>            
+                <li><a href="{% url 'registro'%}"  tarjet=blank>Sign Up</a></li>                   
+                <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+                <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>
+                
+                <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                    
+            </ul>
+        
+        {% endif%}
+        
+    </nav>  
+    </div>
+</header>
+<div class="content-wrapper">
+    <!-- Your content here -->
+    <div class="main__portfolio">
+        <div class="main__portfolio-content">
+            <!-- Your portfolio content here -->
+            <h3>Welcome to Ever's Real Estate Services in Puerto Vallarta, Mexico</h3>
+            <p>At Ever's Real Estate Services, we believe in turning dreams into reality. Led by Ever, a passionate and dedicated real estate agent with years of experience in the vibrant market of Puerto Vallarta, we are committed to providing exceptional service and unmatched expertise.</p>
+            
+            <h3>About Ever</h3>
+            <p>Ever is a seasoned real estate professional who has called Puerto Vallarta home for over a decade. With a deep understanding of the local market and a genuine love for this beautiful coastal city, Ever has built a reputation for excellence and integrity. His commitment to his clients is unparalleled, and he takes pride in helping them find their perfect home or investment property.</p>
+
+            <h3>My Mission</h3>
+            <p>My mission is simple: to make your real estate journey as seamless and rewarding as possible. Whether you are buying, selling, or investing, Ever's Real Estate Services is here to guide you every step of the way. I'm strive to provide personalized service, tailored to meet the unique needs of each client, ensuring that you feel confident and informed throughout the entire process.</p>
+
+            <h3>Why Choose me as your Real Estate Agent?</h3>
+            <p>Local Expertise: Ever’s intimate knowledge of Puerto Vallarta’s neighborhoods, market trends, and lifestyle amenities ensures you get the best advice and options tailored to your needs.<br>
+            Personalized Service: We understand that every client is unique. Ever takes the time to listen to your needs and desires, offering customized solutions and dedicated attention.<br>
+            Proven Track Record: With numerous successful transactions and satisfied clients, Ever's Real Estate Services has a proven history of delivering results.<br>
+            Integrity and Trust: Building lasting relationships based on trust and honesty is at the core of our business. Ever prides himself on transparent communication and ethical practices.</p>
+
+            <h3>Discover Puerto Vallarta</h3>
+            <p>Puerto Vallarta is more than just a destination; it’s a way of living the best life. From its stunning beaches and vibrant culture to its diverse real estate opportunities, there’s something for everyone here. Whether you’re looking for a luxury beachfront property, a charming villa in the hills, or a lucrative investment opportunity, Ever can help you find the perfect match.</p>
+
+            <h3>Get in Touch</h3>
+            <p>Ready to start your real estate journey in Puerto Vallarta? Contact me today and discover how I can help you achieve your real estate goals. Let’s turn your dreams into reality.</p>
+
+            <div class="portfolio__contact_section">
+                <h3>Ever's Real Estate Services</h3>
+                <p>Puerto Vallarta, Mexico</p>
+                <h3>Phone: +52 322 779 5950</h3>
+                <h3>Email: everpv@gmail.com</h3>
+                <li><a href="{% url 'reviews_list' %}" target="_blank">Reviews</a></li>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

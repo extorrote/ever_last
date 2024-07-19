@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {%load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+
+
+     <meta name="programador" content="christian stephen">
+     <meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+     <meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+     
+     <meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+     <link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+     
+     <meta property="og:title" content="Puerto Vallarta Web Developer">
+     <meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+     <meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+
+  
+
+{%load static%}
+{%block title %} 
+
+ {%endblock%}
+
+ <link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/registro.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+{% block content%}
+</head>
+<body>
+  <nav class="main-menu">
+            
+    {% if user.username %}
+    <ul>       
+        <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+        <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+        <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+        <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+        <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>                   
+        <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                   
+        <li><a href="{% url 'logout'%}" >Logged in as  {{ user.username }} : Logout</a></li>
+    </ul>
+    
+
+
+
+    {% else%}
+    <ul>       
+        <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+        <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+        <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+        <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+        <li><a href="#">Services</a></li>
+        <li><a href="{% url 'login'%}"  tarjet=blank>login</a></li>                              
+        <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+        <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>                   
+        <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                    
+    </ul>
+
+{% endif%}
+
+</nav>  
+<section class="form__register">
+  <h4 style="color:red">{{register_form.errors}}</h4> {%comment%} ESTO ES PARA QUE ME MUESTRE LOS MENSAJES DE ERRORES SI ALGUN DATO NO ESTA BIEN {%endcomment%}
+<h2 class="form__register-title"> Sign Up </h2> {%comment%} ACA LE PUEDO PONER EL TITULO QUE QUIERA PERO EN ESTE CASO LE PONGO EL MISMO QUE EL DEL CONTENT PORQUE ES CORTO {% endcomment %}
+
+
+  
+    
+    <form class="form__register-form" method="post" action="">
+      <div class="form__register-input-container">
+    {% csrf_token %}
+   
+    {% for field in register_form %}
+       <label class="form__register-label-container" > {{field.label}}</label>
+        {{field}} {%comment%} ESTE ES EL INPUT {%endcomment%}
+    {% endfor %}
+ 
+    <div class="wrapper"><!--ESTO ES PARA SEPARAR LOS BOTONES-->
+      <div class="button-container">
+          <button class="btn btn-1">Sign up</button>
+      </div>
+
+      
+
+  </div><!--ESTA CIERRA EL wrapper-->
+
+</div>
+    </form>
+    <div>
+  </div>
+</section>
+
+{%endblock%}
+
+</body>
+</html>

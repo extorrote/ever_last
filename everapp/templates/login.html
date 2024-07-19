@@ -1,0 +1,132 @@
+
+
+
+{%load static%}
+
+{%block title %} 
+
+ {%endblock%}
+
+ <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+
+ <link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/registro.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+{% block content%}
+
+
+{%comment%}
+    {% if messages %}
+        {%  for message in messages%}
+        <div id="mensaje-exito">
+          {{message}}</div>
+        {%endfor%}
+    {%endif%}
+{%endcomment%}
+
+
+    
+<section class="form__login">
+
+  <h2 class="form__title">Login</h2>
+    <div class="form__login-alert" >
+    {% if error_message %}
+    {{ error_message }}
+    {% endif %}
+    </div>
+    
+    
+      
+
+  <form class="form__form-login" method="POST"action="">
+      <div class="form__login-input-container">
+
+    {% csrf_token %}
+    <h2 class="identificate"> Identificate </h2> 
+ <label class="label-login"for="username"> Usuario : </label>
+  <input class="input-username-login"type="text" name="username"/>
+
+  <label class="label-login" for="password"> Contraseña : </label>
+ <input  class="input-login" type="password" name="password"/>
+      
+ <div class="wrapper"><!--ESTO ES PARA SEPARAR LOS BOTONES-->
+  <div class="button-container">
+  <div class="button-container">
+      <button class="btn btn-2" type="submit">Login</button>
+  </div>
+
+</div><!--ESTA CIERRA EL wrapper-->
+
+
+  
+  </div>
+</form>
+</section>
+<nav class="main-menu">
+            
+  {% if user.username %}
+  <ul>       
+      <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+      <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+      <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+      <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+      <li><a href="#">Services</a></li>
+      <li><a href="{% url 'contact_form'%}"  tarjet=blank >Contact</a></li>  
+      <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>                   
+      <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                   
+      <li><a href="{% url 'logout'%}" >Logged in as  {{ user.username }} : Logout</a></li>
+  </ul>
+  
+
+
+
+  {% else%}
+  <ul>       
+      <li><a href="{% url 'home'%}"  tarjet=blank >Home</a></li>
+      <li><a href="{% url 'about'%}"  tarjet=blank>About</a></li>
+      <li><a href="{% url 'set_appointment'%}"  tarjet=blank>Request Viewing Appointment</a></li> 
+      <li><a href="{% url 'portfolio'%}"  tarjet=blank>Portfolio</a></li>              
+      <li><a href="#">Services</a></li>                 
+      <li><a href="{% url 'registro'%}"  tarjet=blank>Sign Up</a></li>                   
+      <li><a href="{% url 'contact_form'%}"  tarjet=blank>Contact</a></li>  
+      <li><a href="{% url 'reviews_list'%}"  tarjet=blank >Testimonials</a></li>                   
+      <li><a href="{% url 'faq'%}"  tarjet=blank>FAQ</a></li>                    
+  </ul>
+
+{% endif%}
+
+</nav>  
+</div>
+<footer> &copy; 
+  2024 Ever Real state. All Rights Reserved.  </br> 
+  <h5 type="Phone">Phone: +52 322 779 5950</h5>
+  <h5 type="Email">Email: everpv@gmail.com</h5>
+
+</footer>
+{%endblock%}

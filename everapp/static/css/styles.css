@@ -1,0 +1,666 @@
+*{
+  margin:0;
+  padding:0;
+
+
+}
+
+html {
+  height: 100%;
+  width:auto;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+
+  flex-direction: column;
+  width:auto;
+
+
+}
+
+header {
+
+
+
+  min-height: 50vh;/*CON ESTO EL MAIN AVARVCARA TODO EL ALTO DE LA PANTALLA */
+  position:relative;/*ASI PORQUE VAMOS A USAR POSITION ABSOLUTE EN EL VIDEO ESTO SE LE DA AL DIV PADRE */
+  margin-bottom: 20px;
+
+
+}
+
+
+.header_video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:fill; /*ESTO ES PARA QUE EL VIDEO CUBRA TODO EL ANCHO Y ALTO DEL CONTENEDOR PADRE TAMBIEN LO HACE RESPONSIVE*/
+
+}
+
+
+@media screen and (max-width:768px){
+  .header_video{
+    object-fit: cover;
+  }
+}
+.filtro{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color: #48e;
+  opacity:.9;/*EN VEZ DE BAJARLE EL CONTRASTE AL COLOR NEGRO SE LA BAJAMOS CON OPACITY*/
+  mix-blend-mode: overlay;/*ESTA ES LA QUE SE USA PARA LOS FILTROS , ESTO OSCURECE O ACLARA EL FILTRO DEPENDIENDO DEL COLOR DEL FONDO*/
+  z-index:3;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+.main_about-picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+.main_about-picture img {
+  margin-top: 30px;
+  max-width: 100%;
+  height: auto;
+  max-width: 450px; /* Limiting image width */
+  border-radius: 10px;
+  margin:auto;
+
+  margin-bottom:5px;
+  width: 98%;
+  filter:opacity(.7);
+
+
+}
+
+
+
+
+.main_about-text {/*ESTE ES EL TITULO*/
+  text-align: left;
+  max-width: 900px;
+
+}
+
+/*AQUI LE VAMOS A DAR LAS ANIMACIONESS*/
+@keyframes parpadear{
+  20%{/*ACA LE VAMOS A DAR TODO LO QUE TIENE EL ELEMENTO CUANDO INICIE*/
+
+      background-color: #009FBD;
+
+
+
+  }
+
+  80%{/*LO QUE VA TENER CUANDO TERMINE*/
+      opacity:70%;
+      background-color: #009FBD;
+
+
+    }
+
+  100%{
+    opacity:70%;
+    border-radius: 0 40px 0 ;
+    transition:border-radius 3s ease;
+  }
+}
+.about_aver_title{
+  display:flex;
+  position:sticky;
+  align-items: center;
+  justify-content: center;
+  padding:4px;
+  width:90%;
+  height:40px;
+  bottom:10;
+  margin:15px auto;
+  background-color:rgba(68, 136, 238, 0.212);
+  color:#fff;
+  border-radius:  0  0 40px;
+  animation:parpadear;
+  animation:parpadear 1s 1s both; /*ESTA ANIMACION LA CREAMOS PARA HACER QUE PERFIL PARPADE CUANDO ABRO LA PAG, el .6s ES EL DELAY,*/
+  animation-timeline:view();/*ACA ES DONDE LE INDICO QUE LA ANIMACION VA SER POR VISTA, EXISTE TAMBIEN POR SCROLL*/
+  animation-range: contain 0% cover 10%; /*AQUI LE ESTOY DICIENDO DE DONDE EMPIEZA LA ANIMACION Y A DONDE TERMINA*/
+
+
+}
+
+
+
+.parrafo-header>p{
+  font-size: 1.3rem;
+  text-align: center;
+  color:#ffffff63;
+
+  font-weight:900;
+  position:relative;
+  z-index: 2;
+  border-radius: 20px;
+  margin-bottom:0;
+
+}
+
+/* Main menu styles */
+.main-menu {
+  flex-grow: 1;
+  text-align: center;
+  border-top:1px solid rgba(255, 255, 255, 0.557);
+  margin-top: 0;
+}
+
+.main-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin:10px;
+  background-color:transparent;
+
+
+
+}
+
+
+.main-menu ul li {
+  display: inline-block;
+  margin: 0 10px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: #5555553f;
+  z-index: 4;
+  border-radius: 5px;
+}
+
+
+.main-menu ul li a {
+  display: block;
+  padding: 10px 20px;
+
+  text-decoration: none;
+  background-color: rgba(68, 136, 238, 0.607);
+
+  border-radius: 5px;
+
+  font-family: 30px;
+  font-weight: 900;
+  font-family: Oswald;
+  color:#ffffffc6;
+}
+
+.main-menu ul li a:hover {
+  color: rgba(255, 255, 255, 0.635);
+  background-image:linear-gradient(#48e , #01204E 40%);
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header-container {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .main_about-text {
+      padding: 0 10px;
+  }
+
+  .main-menu {
+      margin-top: 20px;
+  }
+
+  .main-menu ul li {
+      display: inline-block;
+      margin: 10px 0;
+  }
+}
+
+
+/*######## FIN DE HEADER ##################*/
+
+
+
+.container {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+
+}
+.property-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+
+}
+.property-item {
+  padding: 10px;
+  border-bottom: 20px solid #ccc;
+  box-shadow: 0px 0px 20px black;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  overflow-x:hidden;
+
+
+
+}
+
+
+.property-item strong ,p{
+  margin:5px;
+  font-size:12px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
+
+@media screen and (max-width:500px){
+  .image-grid {
+
+    grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+    grid-gap: 5px;
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+@media screen and(max-width:768px){
+  .thumbnail:hover{
+    transition: none;
+    transform:none;
+  }
+}
+.video_property {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+.share_button {
+  margin-top: 10px;
+}
+.share_button a {
+  display: inline-block;
+  padding: 5px 10px;
+
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .container {
+      padding: 2px;
+      max-width: 100%; /* Make container full width on smaller screens */
+  }
+}
+
+
+
+
+
+.active{
+  color:rgba(0, 128, 0, 0.669);
+  font-size: 15px;
+
+}
+
+.alert{
+  max-width:380px;
+  border-radius:5px;
+  margin-bottom:15px;
+  color:white;
+  background-color:rgba(0, 128, 0, 0.603);
+  text-align:center;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  position:relative;
+  z-index: 4;
+  margin:auto;
+}
+
+/* ######################## ESTILOSS BUSCADOR  ################################## */
+
+/* Page header */
+.ver-property_title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333; /* Dark text color */
+}
+
+/* Search form */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top:15px;
+
+}
+.property-h4{
+  max-width: 300px;
+  max-height: 40px;
+  margin-left:45% ;
+  color:rgba(0, 0, 0, 0.324);
+  margin-top: -30px;
+}
+
+h3{
+  color:#48e;
+  font-size: 35px;
+  margin-bottom:5px;
+}
+
+
+
+strong{
+  margin-left:10px;
+}
+form input[type="text"] {
+  padding: 10px;
+  font-size: 1rem;
+
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff; /* Blue button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+@media screen and (max-width:768px){
+  .property-h4{
+    margin:auto;
+    margin-left:170px;
+  }
+}
+.buscador_info p ,strong{
+  margin:auto;
+
+}
+
+
+
+summary{
+
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  max-width:400px;
+  min-width: 150px;
+  width:100%;
+  height:40px;
+
+  background-color: rgba(68, 136, 238, 0.607);
+  border-radius: 5px;
+  margin:0;
+  margin-top:10px;
+  cursor:pointer;
+  align-content: center;
+  position:relative;
+  z-index: 4;
+
+}
+
+
+summary{
+  text-align: center;
+  font-size: 25px;
+  color:rgba(255, 255, 255, 0.678);
+
+}
+
+
+summary:hover{
+
+  background-image:linear-gradient(#48e , #01204E 40%);
+  color:white;
+
+}
+
+
+.summary__main-menu{
+
+  transition: background-color 0.3s ease;
+
+  color:#ffffffc6;
+  margin:auto;
+  justify-content: center;
+  max-width:200px;
+  margin:8px auto;
+  position:relative;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main-menu ul li a:hover {
+  color: rgba(255, 255, 255, 0.635);
+  background-color:#48e;
+}
+
+
+
+
+
+.summary__main-menu:hover{
+  color: rgba(255, 255, 255, 0.635);
+  background-color:#333333a7;
+}
+
+
+li{
+  margin-top:3%;
+  list-style:none;
+
+}
+
+.share_button{
+  font-weight: 900;
+  font-family: 'Courier New', Courier, monospace;
+  display:inline-block;
+  margin: auto;
+  margin-top: 10px;
+  background-color: rgba(68, 136, 238, 0.607);
+  float:right;
+  border-radius: 5px;
+  max-width:400px;
+  width:100%;
+  min-width: 180px;
+  height:40px;
+  align-content: center;
+  text-align: center;
+
+}
+.share_button:hover {
+
+  background-image:linear-gradient(#48e , #01204E 40%);
+
+}
+.share_button a:hover{
+  color:white;
+}
+.share_button a{
+  text-decoration: none;
+  color:rgba(255, 255, 255, 0.678);
+  font-size: 30px;
+  align-content: center;
+  text-align: center;
+}
+
+.map-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media screen and (max-width:931px){
+  summary, .share_button{
+    width:auto;
+    margin:2px;
+  }
+}
+
+
+
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  background-image:linear-gradient(rgba(68, 136, 238, 0.607),rgba(68, 136, 238, 0.607)),url(/static/images/fondo-faq.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 15px;
+  position:absolute;
+  border-radius: 5% 5% 10px  10px;
+    width:1400px ;
+  margin:auto;
+  margin-left:-225px;
+  box-shadow: 0px 0px 20px black;
+
+}
+@media screen and (max-width:1100px){
+  footer{
+    max-width:105%;
+    margin:auto;
+    width:98%
+  }
+}
+
+
+.whatsapp_chat{
+  width:240px;
+  height:40px;
+  font-size: 20px;
+  background-image:url(/static/images/whatsapp.png);
+  background-color:  transparent;
+  background-size: 10%;
+  background-repeat: no-repeat;
+  color:rgba(255, 255, 255, 0.76);
+  border-radius: 5px;
+  border:none;
+  cursor: pointer;
+  border-bottom:1px solid rgba(255, 255, 255, 0.76);
+  animation:shakeY 8s 2s  infinite  ;
+
+
+}
+.whatsapp_chat:hover{
+  color: #29D967;
+}
+.main_about-tetx h2{
+  display:block;
+  margin:auto;
+  margin-left:50%;
+}
+
+@keyframes shakeY {
+  from,
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translate3d(0, 4px, 0);
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+
+

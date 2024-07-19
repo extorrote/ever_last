@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Scheduling</title>
+    {%include 'index.html'%}
+    <style>
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Overall styling for the appointment section */
+.appointment-section {
+    max-width: 600px; 
+    margin: 20px auto; 
+    padding: 20px;
+    background-color: #f0f8ff; /* Light blue background */
+    border: 1px solid #b0c4de; /* Lighter border color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+
+
+/* Calendly container styling */
+.calendly-container {
+    position: relative;
+    width: 100%;
+    height: 600px; /* Fixed height for the Calendly widget */
+    margin-top: 20px; /* Space between appointment header and widget */
+    overflow: hidden;
+}
+h4{
+    text-align:center;
+    font-family:font-family: 'Courier New', Courier, monospace;
+    color:rgba(68, 136, 238, 0.849)
+}
+
+
+/* Calendly iframe styling */
+.calendly-inline-widget {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Remove border */
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+    .appointment-section {
+        padding: 15px;
+        max-width: 100%; /* Full width on smaller screens */
+    }
+    .appointment h4 {
+        font-size: 1.3rem;
+    }
+    .calendly-container {
+        height: 500px; /* Adjusted height for smaller screens */
+    }
+}
+
+footer{display:none}
+
+
+    </style>
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</head>
+<body>
+    
+    <div class="appointment-section">
+        <div class="appointment">
+            <h4>send a Property Viewing Appointment Request</h4>
+            
+        </div>
+        <div class="calendly-container">
+            <div class="calendly-inline-widget" data-url="https://calendly.com/wwwstephen95live/make-appointment?hide_event_type_details=1&hide_gdpr_banner=1"></div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<head>
+    {%load static%}
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>Reviews</title>
+    {%include 'index.html'%}
+    
+    
+    
+    <link 
+    rel="stylesheet"
+    type="text/css"
+    href= {% static 'css/reviews_list_styles.css'%} />
+    
+    <link 
+    rel="stylesheet"
+    type="text/css"
+    href= {% static  'css/fonts.css'%}/>
+    
+</head>
+
+
+{% block content %}
+<div class="centrar">
+    <h1>Reviews</h1>
+    {% for recommendation in recommendations %}
+        <div class="recommendation-container">
+            {% if recommendation.imagen and recommendation.imagen.url %}
+                <img class="recommendation-image" src="{{ recommendation.imagen.url }}" alt="Image">
+            {% endif %}
+            <h3 class="recommendation-title">{{ recommendation.name }} <span class="material-symbols-outlined"> Verified</span></h3>
+            {% if recommendation.email %}
+                <p class="recommendation-email">Email: {{ recommendation.email }}</p>
+            {% endif %}
+            <p class="recommendation-text">{{ recommendation.recommendation }}</p>
+        </div>
+        <hr>
+    {% empty %}
+        <p class="no-recommendations">No reviews yet.</p>
+    {% endfor %}
+    <div class="add-recommendation-link">
+        
+        <a href="{% url 'submit_review' %}" target="_blank">Add Review</a>
+    
+    </div>
+</div>
+{% endblock %}
+

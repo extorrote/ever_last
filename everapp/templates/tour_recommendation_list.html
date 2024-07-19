@@ -1,0 +1,120 @@
+
+{%load static%}
+
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" /><!--ICONOS GG-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="CHRISTHIAN STEPHEN ">
+
+    <title> Desarrollo de Paginas y Aplicaciones Web Puerto Vallarta y todo Mexico</title>
+
+
+
+
+    <meta name="programador" content="christian stephen">
+<meta name="description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+<meta name="keywords" content="Desarrollo Web Puerto Vallarta Mexico, Desarrollador web de aplicaciones web, Sitios web acorde a las necesidades de tu negocio, Desarrollador web, Diseño web, Programación, programador web, Experto en desarrollo y hosting web, desarrollo digital">
+
+<meta name="title" content="Desarrollo Web 100% Personalizado | Métodos y Diseño Personalizado Dependiendo de las Necesidades de Tu negocio">
+<link rel="icon" href="{% static 'images/foto-tarjeta-ico.ico' %}" alt="logo pagina">
+
+<meta property="og:title" content="Puerto Vallarta Web Developer">
+<meta property="og:image" content="/static/images/paginas_web_puerto_vallarta.png" type="image/png">
+<meta property="og:description" content="Desarrollador web Christian Stephen dedicado a crear sitios y aplicaciones que reflejen los valores y principios de tu negocio por medio del mundo digital. Comprometido con la excelencia técnica y la integridad ética en cada proyecto, utilizando mis habilidades para impactar positivamente en línea con mi trabajo.">
+
+
+<!-- ############## TROZO DE CODIGO PARA QUE LAS IMAGENES TENGAN BOTON PARA CERRARLAS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".fancybox").fancybox({
+            infobar: false, // Disable the bottom toolbar
+            buttons: [
+                'close'
+            ],
+            btnTpl: {
+                close: '<button data-fancybox-close class="fancybox-button fancybox-button--close" title="Close">' +
+                    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>' +
+                    '</button>'
+            }
+        });
+    });
+</script>
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static 'css/tour_recommendation.css'%} />
+
+<link 
+rel="stylesheet"
+type="text/css"
+href= {% static  'css/fonts.css'%}/>
+
+
+{%block content%}
+<main class="container">
+    <div class="articulos-item">
+        <div class="place__recommendation_list-title">
+        <h1>tour Recommendation List Puerto vallarta</h1></div>
+        {% for place in places %}
+            <div class="property-item">
+                        
+                        <p><strong>Type of Tour:</strong> {{ place.type_of_tour}}</p>
+                        <p><strong>Tour Name:</strong> {{ place.tour_name}}</p>
+                        <p><strong>Tour Compaany Name:</strong> {{ place.tour_company_name}}</p>
+                        <p><strong>Email:</strong> {{ place.email}}</p>
+                        <p><strong>Range of Price:</strong> {{ place.price}}</p>
+                        <p><strong>Address:</strong> {{ place.company_address}}</p>
+                        <p><strong>Tour Description:</strong> {{ place.description}}</p>
+                        
+                    <h3>Gallery</h3>
+                    <div class="image-grid">
+                        {% if place.imagen1 != 'null' and place.imagen1.url|length >= 1 %}
+                                <a class="fancybox" href="{{ place.imagen1.url }}">
+                                    <img src="{{ place.imagen1.url }}" class="thumbnail" />
+                                </a>
+                                {% endif %}
+                                {% if place.imagen2 != 'null' and place.imagen2.url|length >= 1 %}
+                                <a class="fancybox" href="{{ place.imagen2.url }}">
+                                    <img src="{{ place.imagen2.url }}" class="thumbnail" />
+                                </a>
+                                {% endif %}
+                                {% if place.imagen3 != 'null' and place.imagen3.url|length >= 1 %}
+                                <a class="fancybox" href="{{ place.imagen3.url }}">
+                                    <img src="{{ place.imagen3.url }}" class="thumbnail" />
+                                </a>
+                                {% endif %}
+                                {% if place.imagen4 != 'null' and place.imagen4.url|length >= 1 %}
+                                <a class="fancybox" href="{{ place.imagen4.url }}">
+                                    <img src="{{ place.imagen4.url }}" class="thumbnail" />
+                                </a>
+                                {% endif %}
+                            </div>
+                                <p><strong> Google Maps Location</strong></p>
+                                {% if place.google_maps %}
+                                    <div class="map-container">
+                                    {{ place.google_maps | safe }}  {# Use | safe filter to render HTML content #}
+                                    </div>
+                                {% else %}
+                                    <p>Google Maps location not available for this property.</p>
+                                {% endif %}
+                            
+                        
+
+        <!-- Add more fields as needed -->
+        <div class="share_button">
+            <a href="{% url 'tour_recommendation_create' %}">ADD  TOUR</a>
+            <a href="{% url 'tour_recommendation_detail' place.pk %}">SHARE</a>
+            <a href="{% url 'tour_recommendation_edit' place.pk %}">EDIT</a>
+            <a href="{% url 'home'  %}">HOME</a>
+            </div> {%comment%} RECOMMENDATION SECTION buttons END {%endcomment%}
+    </div>
+    
+{% endfor %}
+</div>
+</main>
+{%endblock%}
+
